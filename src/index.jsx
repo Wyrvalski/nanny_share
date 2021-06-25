@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-import App from "./App";
+import LandingPage from "./LandingPage";
+import GlobalStyle from "./styles";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalStyle />
+    <LandingPage />
   </React.StrictMode>,
   document.getElementById("root")
 );
