@@ -19,7 +19,7 @@ const NewNanny = () => {
       <SendContainer>
         <Input placeHolder={"Your Name"} type={"text"} />
         <Input placeHolder={"Your Email"} type={"email"} />
-        <ButtonLink title={"Send"} />
+        <ButtonLink title={"Send"} heightButton={"48px"} />
       </SendContainer>
     </NewNannyContainer>
   );
