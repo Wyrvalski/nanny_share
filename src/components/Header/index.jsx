@@ -1,12 +1,12 @@
 import React from "react";
 import { logoHeader } from "../../logos";
 import { HeaderContainer } from "./styles";
-import Button from "../../common/components/Button";
+import ButtonLink from "../../common/components/ButtonLink";
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <div id="firstElements">
+      <nav id="firstElements">
         <img src={logoHeader}></img>
         <ul>
           <a href="#">
@@ -19,19 +19,19 @@ const Header = () => {
             <li>Our Story</li>
           </a>
         </ul>
-      </div>
-      <div id="secondElement">
-        <Button
-          title={"Become a Nanny Share Host"}
-          widthButton={"220px"}
-          heightButton={"40px"}
-        />
+      </nav>
+      <nav id="secondElement">
         <ul>
+          <ButtonLink
+            title={"Become a Nanny Share Host"}
+            widthButton={"220px"}
+            heightButton={"40px"}
+          />
           <a href="#">
-            <li>SignIn</li>
+            <li>Sign In</li>
           </a>
         </ul>
-      </div>
+      </nav>
     </HeaderContainer>
   );
 };

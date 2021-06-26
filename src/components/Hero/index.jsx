@@ -1,18 +1,19 @@
 import React from "react";
-import Header from "../Header";
 import {
   ContentHero,
   HeroContainer,
   LeftContent,
+  LinkButtonContainer,
+  PlayButton,
   RightContent,
 } from "./styles";
-import { manageImage } from "../../logos";
+import { manageImage, playButton } from "../../logos";
+import { Link } from "../../common/components/Link";
 
 const Hero = () => {
   return (
     <>
       <HeroContainer>
-        <Header />
         <ContentHero>
           <LeftContent>
             <h1>Easily create or join a local nanny share with Hapu</h1>
@@ -20,6 +21,14 @@ const Hero = () => {
               Hapu is Airbnb for nanny share. Share your home, nanny and costs
               and create new flexible, affordable solutions in childcare.
             </h3>
+            <LinkButtonContainer>
+              <PlayButton src={playButton} />
+              <Link
+                colorLink={"white"}
+                title={"See hapu in action (27 seconds)"}
+                marginLink={"0 0 0 20px"}
+              ></Link>
+            </LinkButtonContainer>
           </LeftContent>
           <RightContent>
             <img src={manageImage} />

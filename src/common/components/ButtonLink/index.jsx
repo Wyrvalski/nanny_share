@@ -2,18 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ButtonContainer } from "./styles";
 
-const Button = ({ title, widthButton, heightButton }) => {
+const ButtonLink = ({ title, widthButton, heightButton }) => {
   return (
     <ButtonContainer widthButton={widthButton} heightButton={heightButton}>
-      {title}
+      <li>{title}</li>
     </ButtonContainer>
   );
 };
 
-Button.propTypes = {
+ButtonLink.propTypes = {
   title: PropTypes.string.isRequired,
   widthButton: PropTypes.string,
   heightButton: PropTypes.string,
 };
 
-export default Button;
+export default ButtonLink;

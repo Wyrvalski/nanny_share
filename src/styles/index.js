@@ -30,10 +30,22 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     line-height: 1;
+    font-family: Inter;
+    font-size: 16px;
+    background: #FAF9F7;
   }
 
   ol, ul {
     list-style: none;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    padding-top: 30px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+    max-width: 500px;
   }
 
   blockquote, q {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroContainer = styled.div`
+export const HeroContainer = styled.article`
   background-image: linear-gradient(
       314.72deg,
       #c86dd7 -1.5%,
@@ -13,12 +13,12 @@ export const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 616px;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     height: 540px;
   }
 `;
 
-export const ContentHero = styled.div`
+export const ContentHero = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -36,16 +36,18 @@ export const LeftContent = styled.div`
     font-size: 40px;
     font-family: Inter;
     color: white;
+    line-height: 48px;
   }
   h3 {
     margin-top: 24px;
     font-family: Inter;
     font-size: 18px;
+    line-height: 24px;
     color: white;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     width: 100%;
-    margin-left: 15px;
+    margin-left: 20px;
     margin-right: 15px;
     align-items: center;
     h1 {
@@ -56,9 +58,6 @@ export const LeftContent = styled.div`
     h3 {
       text-align: center;
     }
-  }
-  @media only screen and (max-width: 900px) {
-    margin-left: 20px;
   }
 `;
 
@@ -72,10 +71,25 @@ export const RightContent = styled.div`
     font-family: Inter;
     color: white;
   }
-  @media only screen and (max-width: 600px) {
-    display: none;
+  img {
+    width: 100%;
+    max-width: 316px;
+    height: auto;
   }
   @media only screen and (max-width: 900px) {
     margin-right: 20px;
+    display: none;
+  }
+`;
+
+export const LinkButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+`;
+
+export const PlayButton = styled.img`
+  &:hover {
+    cursor: pointer;
   }
 `;
