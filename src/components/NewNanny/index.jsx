@@ -3,8 +3,10 @@ import SubTitle from "../../common/components/SubTitle";
 import { NewNannyContainer, SendContainer } from "./styles";
 import Input from "../../common/components/Input";
 import ButtonLink from "../../common/components/ButtonLink";
+import { useForm } from "react-hook-form";
 
 const NewNanny = () => {
+  const { register, handleSubmit } = useForm();
   return (
     <NewNannyContainer>
       <SubTitle
@@ -16,11 +18,13 @@ const NewNanny = () => {
         Leave us your name and email and we’ll update you as soon as a share
         becomes available in your area!
       </p>
-      <SendContainer>
-        <Input placeHolder={"Your Name"} type={"text"} />
-        <Input placeHolder={"Your Email"} type={"email"} />
-        <ButtonLink title={"Send"} heightButton={"48px"} />
-      </SendContainer>
+      <form onSubmit={handleSubmit}>
+        <SendContainer>
+          <Input ref={register} placeHolder={"Your Name"} type={"text"} />
+          <Input ref={register} placeHolder={"Your Email"} type={"email"} />
+          <ButtonLink title={"Send"} heightButton={"48px"} />
+        </SendContainer>
+      </form>
     </NewNannyContainer>
   );
 };

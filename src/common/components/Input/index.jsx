@@ -3,7 +3,7 @@ import { InputContainer } from "./style";
 import PropTypes from "prop-types";
 
 const Input = ({ placeHolder, type, ref }) => {
-  return <InputContainer placeholder={placeHolder} type={type} ref={ref} />;
+  return <InputContainer ref={ref} placeholder={placeHolder} type={type} />;
 };
 
 Input.propTypes = {
