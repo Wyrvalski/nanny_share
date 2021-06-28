@@ -1,15 +1,17 @@
 import React from "react";
 import SubTitle from "../../common/components/SubTitle";
 import { ShareImage } from "../../logos";
-import { ShareNannyContainer } from "./styles";
 import Link from "../../common/components/Link";
+import Article from "../../common/components/Article";
+import { LeftElements, RightElements } from "./styles";
+import Paragraph from "../../common/components/Paragraph";
 
 const ShareNanny = () => {
   return (
-    <ShareNannyContainer>
-      <div id="leftElements">
+    <Article isReverse>
+      <LeftElements>
         <SubTitle title={`Share your home, nanny and costs`} width={"300px"} />
-        <p>
+        <Paragraph align={"left"}>
           You have a fantastic home, a fantastic nanny and wouldn’t cutting your
           costs in half be, well, fantastic?! If only it was easy to connect
           with other parents to share your costs? Well now it is, with Hapu.
@@ -17,13 +19,13 @@ const ShareNanny = () => {
           tribal principles that empowers you to create and manage your own
           tribe. A tribe that together has the power to create new affordable
           solutions in childcare that work for you and your community.
-        </p>
+        </Paragraph>
         <Link title={"Ready to get started?"} />
-      </div>
-      <div id="rigthElements">
+      </LeftElements>
+      <RightElements>
         <img src={ShareImage} />
-      </div>
-    </ShareNannyContainer>
+      </RightElements>
+    </Article>
   );
 };
 

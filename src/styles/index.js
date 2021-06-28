@@ -39,15 +39,6 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
-  p {
-    font-size: 16px;
-    line-height: 28px;
-    padding-top: 30px;
-    padding-right: 60px;
-    padding-bottom: 50px;
-    max-width: 500px;
-  }
-
   blockquote, q {
     quotes: none;
   }

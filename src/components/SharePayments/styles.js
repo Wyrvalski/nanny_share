@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RightElements = styled.section`
+export const LeftElements = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,20 +11,21 @@ export const RightElements = styled.section`
   }
 `;
 
-export const LeftElements = styled.section`
+export const RightElements = styled.section`
+  margin-left: 20px;
   max-width: 600px;
-  @media only screen and (max-width: 1550px) {
-    max-width: 450px;
+  width: 100%;
+  p {
+    text-align: left;
   }
 
   @media only screen and (max-width: 900px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     p {
       text-align: center;
-      padding-right: 0;
     }
+  }
+
+  @media only screen and (max-width: 1550px) {
+    max-width: 450px;
   }
 `;

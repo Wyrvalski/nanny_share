@@ -15,5 +15,6 @@ export const SubTitleContainer = styled.h2`
   }};
   @media only screen and (max-width: 900px) {
     text-align: center;
+    padding-top: 40px;
   }
 `;

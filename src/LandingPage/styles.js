@@ -8,7 +8,7 @@ export const Main = styled.main`
   max-width: 1200px;
   align-content: center;
   margin: auto;
-  padding: 150px;
+  padding: 100px 150px 80px 228px;
   @media only screen and (max-width: 900px) {
     padding: 16px;
   }
