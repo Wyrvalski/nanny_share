@@ -4,15 +4,15 @@ export const SendContainer = styled.section`
   display: flex;
   flex-direction: row;
   padding-top: 20px;
-  height: 48px;
   .input-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  span {
-    margin-top: 10px;
+  .MuiPaper-root {
+    margin-top: 120px;
     color: red;
+    position: absolute;
   }
   a {
     color: white;
@@ -22,14 +22,22 @@ export const SendContainer = styled.section`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    min-height: 220px;
+    .MuiPaper-root {
+      color: red;
+      position: relative;
+      margin: 5px;
+      width: 100%;
+      padding: 2px;
+    }
     button {
       width: 100%;
       margin-left: 0;
+      margin-top: 5px;
     }
     .input-container {
       align-items: center;
       justify-content: center;
+      margin: 10px;
     }
     a {
       margin: 3px 0 0 0;

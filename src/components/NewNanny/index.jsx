@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SubTitle from "../../common/components/SubTitle";
 import { SendContainer } from "./styles";
 import ButtonLink from "../../common/components/ButtonLink";
@@ -8,6 +8,13 @@ import Paragraph from "../../common/components/Paragraph";
 import Input from "../../common/components/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { saveInfo } from "../../sagas/actions/submitForm";
+import { Alert } from "@material-ui/lab";
+import { Snackbar } from "@material-ui/core";
+import MuiAlert from "@material-ui/lab/Alert";
+
+function AlertSuccess(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const NewNanny = () => {
   const {
@@ -15,11 +22,22 @@ const NewNanny = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [open, setOpen] = useState(false);
   const info = useSelector((state) => state);
   const dispatch = useDispatch();
-  console.log(errors, "ggggggggggg");
+
+  useEffect(() => {
+    setOpen(info?.success);
+  }, [info]);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
   const onSubmit = (userData) => {
-    console.log(userData, "aaaaaaaaaaaaa");
     const user = userData;
     dispatch(saveInfo(user));
   };
@@ -40,24 +58,28 @@ const NewNanny = () => {
           <div className={"input-container"}>
             <Input
               name={"name"}
-              inputRef={register("name", {
-                required: { value: true, message: "This field is required" },
-              })}
+              inputRef={register("name")}
               placeHolder={"Your Name"}
               type={"text"}
             />
-            {errors?.name?.message && <span>{errors?.name?.message}</span>}
+            {(errors?.name?.message || info?.errorName) && (
+              <Alert severity="error">
+                {errors?.name?.message || info?.errorName}
+              </Alert>
+            )}
           </div>
           <div className={"input-container"}>
             <Input
               name={"email"}
-              inputRef={register("email", {
-                required: { value: true, message: "This field is required" },
-              })}
+              inputRef={register("email")}
               placeHolder={"Your Email"}
               type={"email"}
             />
-            {errors?.email?.message && <span>{errors?.email?.message}</span>}
+            {(errors?.email?.message || info?.errorEmail) && (
+              <Alert severity="error">
+                {errors?.email?.message || info?.errorEmail}
+              </Alert>
+            )}
           </div>
 
           <ButtonLink
@@ -66,6 +88,12 @@ const NewNanny = () => {
             heightButton={"48px"}
           />
         </SendContainer>
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <AlertSuccess onClose={handleClose} severity="success">
+            Hello {info?.name}, your email {info?.email} has been successfully
+            registered.
+          </AlertSuccess>
+        </Snackbar>
       </form>
     </Article>
   );

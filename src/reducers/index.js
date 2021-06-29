@@ -6,14 +6,16 @@ const initialState = {
   errorEmail: "",
   errorName: "",
   isLoading: false,
+  success: false,
 };
 
 export const user = (state = initialState, action = null) => {
   if (action.type === types.SEND_SUCCESS) {
     return {
-      name: action.user.name,
-      email: action.user.email,
+      name: action.payload.user.name,
+      email: action.payload.user.email,
       isLoading: false,
+      success: true,
     };
   } else if (action.type === types.SEND_FAIL) {
     const response = action?.errorData;
@@ -24,6 +26,7 @@ export const user = (state = initialState, action = null) => {
     };
   } else if (action.type === types.SEND_REQUEST) {
     return {
+      ...state,
       isLoading: true,
     };
   }

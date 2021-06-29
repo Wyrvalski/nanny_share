@@ -7,7 +7,7 @@ import {
   PlayButton,
   RightContent,
 } from "./styles";
-import { manageImage, playButton } from "../../logos";
+import { manageImage, playButton } from "../../images";
 import LinkParagraph from "../../common/components/LinkParagraph";
 import {
   Experiment,
@@ -66,12 +66,10 @@ const Hero = () => {
 
 export default Hero;
 
-// Called when the experiment is displayed to the user.
 emitter.addPlayListener(function (experimentName, variantName) {
   console.log(`Displaying experiment ${experimentName} variant ${variantName}`);
 });
 
-// Called when a 'win' is emitted, in this case by this.refs.experiment.win()
 emitter.addWinListener(function (experimentName, variantName) {
   console.log(
     `Variant ${variantName} of experiment ${experimentName} was clicked`

@@ -1,5 +1,5 @@
 import React from "react";
-import { logoHeader } from "../../logos";
+import { logoHeader } from "../../images";
 import { HeaderContainer } from "./styles";
 import ButtonLink from "../../common/components/ButtonLink";
 import { Link } from "react-router-dom";
@@ -11,13 +11,13 @@ const Header = () => {
         <img src={logoHeader}></img>
         <ul>
           <li>
-            <Link to="/">Create Your Nanny Share</Link>
+            <Link to="/create">Create Your Nanny Share</Link>
           </li>
           <li>
-            <Link to="/">Browse Shares</Link>
+            <Link to="/browse">Browse Shares</Link>
           </li>
           <li>
-            <Link to="/">Our Story</Link>
+            <Link to="/story">Our Story</Link>
           </li>
         </ul>
       </nav>
@@ -29,7 +29,7 @@ const Header = () => {
             heightButton={"40px"}
           />
           <li>
-            <Link to="/">Sign In</Link>
+            <Link to="/signin">Sign In</Link>
           </li>
         </ul>
       </nav>

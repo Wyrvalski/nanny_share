@@ -3,7 +3,7 @@ import Article from "../../common/components/Article";
 import SubTitle from "../../common/components/SubTitle";
 import Paragraph from "../../common/components/Paragraph";
 import LinkParagraph from "../../common/components/LinkParagraph";
-import { BillingHistory } from "../../logos";
+import { BillingHistory } from "../../images";
 import { ImageContainer } from "./styles";
 
 const History = () => {

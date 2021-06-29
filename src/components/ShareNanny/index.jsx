@@ -1,6 +1,6 @@
 import React from "react";
 import SubTitle from "../../common/components/SubTitle";
-import { ShareImage } from "../../logos";
+import { ShareImage } from "../../images";
 import LinkParagraph from "../../common/components/LinkParagraph";
 import Article from "../../common/components/Article";
 import { LeftElements, RightElements } from "./styles";

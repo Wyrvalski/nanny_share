@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
   display: flex;
@@ -23,7 +24,7 @@ export const FooterContainer = styled.footer`
   }
 `;
 
-export const CalendarButton = styled.a`
+export const CalendarButton = styled(Link)`
   background: #5e20a4;
   text-decoration: none;
   display: flex;

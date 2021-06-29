@@ -1,6 +1,6 @@
 import React from "react";
 import Article from "../../common/components/Article";
-import { DailyDiaryImage } from "../../logos";
+import { DailyDiaryImage } from "../../images";
 import SubTitle from "../../common/components/SubTitle";
 import { ImageContainer } from "./style";
 import Paragraph from "../../common/components/Paragraph";

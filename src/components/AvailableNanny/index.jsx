@@ -1,6 +1,6 @@
 import React from "react";
 import LinkParagraph from "../../common/components/LinkParagraph";
-import { ImageAvailable } from "../../logos";
+import { ImageAvailable } from "../../images";
 import { AvalaleContainer } from "./styles";
 
 const AvailableNanny = () => {

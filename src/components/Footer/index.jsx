@@ -15,7 +15,7 @@ import {
   HapuLogo,
   InstagramLogo,
   TwitterLogo,
-} from "../../logos";
+} from "../../images";
 import LinkParagraph from "../../common/components/LinkParagraph";
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const Footer = () => {
       <Paragraph align={"center"} fontSize={"18px"}>
         Takes less than 5 minutes to get started
       </Paragraph>
-      <CalendarButton href="/#">
+      <CalendarButton to="/create">
         <img src={CalendarImage} />
         <TextCalendar>
           <p>Create Your Nanny Share</p>
@@ -41,27 +41,27 @@ const Footer = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/#">Share Your Nanny</Link>
+              <Link to="/share">Share Your Nanny</Link>
             </li>
             <li>
-              <Link to="/">Our Story</Link>
+              <Link to="/story">Our Story</Link>
             </li>
             <li>
-              <Link to="/">Blog</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Link to="/">Terms & Privacy</Link>
+              <Link to="/terms">Terms & Privacy</Link>
             </li>
           </ul>
         </nav>
         <SocialNetwork>
-          <Link to="/">
+          <Link to="/facebook">
             <img src={FacebookLogo} />
           </Link>
-          <Link to="/">
+          <Link to="/instagram">
             <img src={InstagramLogo} />
           </Link>
-          <Link to="/">
+          <Link to="/twitter">
             <img src={TwitterLogo} />
           </Link>
         </SocialNetwork>

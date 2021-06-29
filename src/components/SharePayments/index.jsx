@@ -1,5 +1,5 @@
 import React from "react";
-import { ImagePerChild } from "../../logos";
+import { ImagePerChild } from "../../images";
 import SubTitle from "../../common/components/SubTitle";
 import { LeftElements, RightElements } from "./styles";
 import Link from "../../common/components/LinkParagraph";
