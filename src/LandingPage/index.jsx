@@ -9,10 +9,11 @@ import SharePayments from "../components/SharePayments";
 import History from "../components/History";
 import DailyDiary from "../components/DailyDiary";
 import Footer from "../components/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <>
+    <Router>
       <Header />
       <Hero />
       <AvailableNanny />
@@ -28,7 +29,7 @@ const LandingPage = () => {
         <DailyDiary />
       </Main>
       <Footer />
-    </>
+    </Router>
   );
 };
 

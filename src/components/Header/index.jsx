@@ -2,6 +2,7 @@ import React from "react";
 import { logoHeader } from "../../logos";
 import { HeaderContainer } from "./styles";
 import ButtonLink from "../../common/components/ButtonLink";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,15 +10,15 @@ const Header = () => {
       <nav id="firstElements">
         <img src={logoHeader}></img>
         <ul>
-          <a href="#">
-            <li>Create Your Nanny Share</li>
-          </a>
-          <a href="#">
-            <li>Browse Shares</li>
-          </a>
-          <a href="#">
-            <li>Our Story</li>
-          </a>
+          <li>
+            <Link to="/">Create Your Nanny Share</Link>
+          </li>
+          <li>
+            <Link to="/">Browse Shares</Link>
+          </li>
+          <li>
+            <Link to="/">Our Story</Link>
+          </li>
         </ul>
       </nav>
       <nav id="secondElement">
@@ -27,9 +28,9 @@ const Header = () => {
             widthButton={"220px"}
             heightButton={"40px"}
           />
-          <a href="#">
-            <li>Sign In</li>
-          </a>
+          <li>
+            <Link to="/">Sign In</Link>
+          </li>
         </ul>
       </nav>
     </HeaderContainer>

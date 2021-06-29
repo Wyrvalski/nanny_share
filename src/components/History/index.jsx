@@ -2,7 +2,7 @@ import React from "react";
 import Article from "../../common/components/Article";
 import SubTitle from "../../common/components/SubTitle";
 import Paragraph from "../../common/components/Paragraph";
-import Link from "../../common/components/Link";
+import LinkParagraph from "../../common/components/LinkParagraph";
 import { BillingHistory } from "../../logos";
 import { ImageContainer } from "./styles";
 
@@ -16,7 +16,9 @@ const History = () => {
         we’ve defined Hapu around our three tribal principles; clearly defined
         process, transparency over money and equality of participation.
       </Paragraph>
-      <Link title={"Read how Hapu’s tribal background defines our app "} />
+      <LinkParagraph
+        title={"Read how Hapu’s tribal background defines our app "}
+      />
       <ImageContainer>
         <img src={BillingHistory} />
       </ImageContainer>

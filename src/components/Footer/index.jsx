@@ -16,7 +16,8 @@ import {
   InstagramLogo,
   TwitterLogo,
 } from "../../logos";
-import Link from "../../common/components/Link";
+import LinkParagraph from "../../common/components/LinkParagraph";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -32,38 +33,37 @@ const Footer = () => {
           <span>Takes less than 5 minutes</span>
         </TextCalendar>
       </CalendarButton>
-      <Link title={"Or browse local nanny-shares"} />
+      <LinkParagraph title={"Or browse local nanny-shares"} />
       <SectionFooter>
         <div id="hapu-logo">
           <img src={HapuLogo} />
         </div>
-
         <nav>
           <ul>
             <li>
-              <a href="/#">Share Your Nanny</a>
+              <Link to="/#">Share Your Nanny</Link>
             </li>
             <li>
-              <a href="/#">Our Story</a>
+              <Link to="/">Our Story</Link>
             </li>
             <li>
-              <a href="/#">Blog</a>
+              <Link to="/">Blog</Link>
             </li>
             <li>
-              <a href="/#">Terms & Privacy</a>
+              <Link to="/">Terms & Privacy</Link>
             </li>
           </ul>
         </nav>
         <SocialNetwork>
-          <a href="/#">
+          <Link to="/">
             <img src={FacebookLogo} />
-          </a>
-          <a href="/#">
+          </Link>
+          <Link to="/">
             <img src={InstagramLogo} />
-          </a>
-          <a href="/#">
+          </Link>
+          <Link to="/">
             <img src={TwitterLogo} />
-          </a>
+          </Link>
         </SocialNetwork>
       </SectionFooter>
       <LineFooter />

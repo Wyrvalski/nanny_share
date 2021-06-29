@@ -3,11 +3,15 @@ import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import LandingPage from "./LandingPage";
 import GlobalStyle from "./styles";
-
+import { Provider } from "react-redux";
+import { stores } from "./store";
+const store = stores;
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <LandingPage />
+    <Provider store={store}>
+      <GlobalStyle />
+      <LandingPage />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

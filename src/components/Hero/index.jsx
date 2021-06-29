@@ -8,7 +8,7 @@ import {
   RightContent,
 } from "./styles";
 import { manageImage, playButton } from "../../logos";
-import { Link } from "../../common/components/Link";
+import LinkParagraph from "../../common/components/LinkParagraph";
 
 const Hero = () => {
   return (
@@ -23,11 +23,11 @@ const Hero = () => {
             </h3>
             <LinkButtonContainer>
               <PlayButton src={playButton} />
-              <Link
+              <LinkParagraph
                 colorLink={"white"}
                 title={"See hapu in action (27 seconds)"}
                 marginLink={"0 0 0 20px"}
-              ></Link>
+              ></LinkParagraph>
             </LinkButtonContainer>
           </LeftContent>
           <RightContent>

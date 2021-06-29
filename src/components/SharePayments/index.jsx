@@ -2,7 +2,7 @@ import React from "react";
 import { ImagePerChild } from "../../logos";
 import SubTitle from "../../common/components/SubTitle";
 import { LeftElements, RightElements } from "./styles";
-import Link from "../../common/components/Link";
+import Link from "../../common/components/LinkParagraph";
 import Article from "../../common/components/Article";
 import Paragraph from "../../common/components/Paragraph";
 
@@ -14,7 +14,7 @@ const SharePayments = () => {
       </LeftElements>
       <RightElements>
         <SubTitle title={"Shared payments made simple"} />
-        <Paragraph>
+        <Paragraph align={"left"}>
           Sometimes it’s hard enough just sharing a restaurant bill. Try sharing
           that bill week in, week out and you might encounter more than a few
           snares. But not with Hapu. Simply set your rates and our automated

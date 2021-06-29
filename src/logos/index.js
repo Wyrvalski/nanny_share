@@ -11,3 +11,4 @@ export { default as HapuLogo } from "./hapu-logo.svg";
 export { default as FacebookLogo } from "./facebook.svg";
 export { default as InstagramLogo } from "./instagram-logo.svg";
 export { default as TwitterLogo } from "./twitter-logo.svg";
+export { default as IconLoader } from "./spinning-circles.svg";

@@ -2,14 +2,22 @@ import React from "react";
 import { InputContainer } from "./style";
 import PropTypes from "prop-types";
 
-const Input = ({ placeHolder, type, ref }) => {
-  return <InputContainer ref={ref} placeholder={placeHolder} type={type} />;
+const Input = ({ placeHolder, type, inputRef, name }) => {
+  return (
+    <InputContainer
+      name={name}
+      {...inputRef}
+      placeholder={placeHolder}
+      type={type}
+    />
+  );
 };
 
 Input.propTypes = {
   placeHolder: PropTypes.string.isRequired,
   type: PropTypes.string,
-  ref: PropTypes.any,
+  inputRef: PropTypes.any,
+  name: PropTypes.string,
 };
 
 export default Input;
