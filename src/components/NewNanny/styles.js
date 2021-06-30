@@ -30,7 +30,7 @@ export const SendContainer = styled.section`
       padding: 2px;
     }
     button {
-      width: 100%;
+      width: 320px;
       margin-left: 0;
       margin-top: 5px;
     }
@@ -41,11 +41,11 @@ export const SendContainer = styled.section`
     }
     a {
       margin: 3px 0 0 0;
-      width: 348px;
+      width: 300px;
     }
     input {
       margin: 0 0 0 0;
-      width: 328px;
+      width: 300px;
       height: 28px;
     }
   }

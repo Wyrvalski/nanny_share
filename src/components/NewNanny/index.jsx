@@ -22,12 +22,14 @@ const NewNanny = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [open, setOpen] = useState(false);
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openError, setOpenError] = useState(false);
   const info = useSelector((state) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setOpen(info?.success);
+    setOpenSuccess(info?.success);
+    info?.error?.error && setOpenError(true);
   }, [info]);
 
   const handleClose = (event, reason) => {
@@ -35,7 +37,8 @@ const NewNanny = () => {
       return;
     }
 
-    setOpen(false);
+    setOpenError(false);
+    setOpenSuccess(false);
   };
   const onSubmit = (userData) => {
     const user = userData;
@@ -62,9 +65,9 @@ const NewNanny = () => {
               placeHolder={"Your Name"}
               type={"text"}
             />
-            {(errors?.name?.message || info?.errorName) && (
+            {(errors?.name?.message || info?.error?.name) && (
               <Alert severity="error">
-                {errors?.name?.message || info?.errorName}
+                {errors?.name?.message || info?.error?.name}
               </Alert>
             )}
           </div>
@@ -75,9 +78,9 @@ const NewNanny = () => {
               placeHolder={"Your Email"}
               type={"email"}
             />
-            {(errors?.email?.message || info?.errorEmail) && (
+            {(errors?.email?.message || info?.error?.email) && (
               <Alert severity="error">
-                {errors?.email?.message || info?.errorEmail}
+                {errors?.email?.message || info?.error?.email}
               </Alert>
             )}
           </div>
@@ -85,13 +88,26 @@ const NewNanny = () => {
           <ButtonLink
             isLoading={info?.isLoading}
             title={"Send"}
-            heightButton={"48px"}
+            heightButton={"42px"}
           />
         </SendContainer>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Snackbar
+          open={openSuccess}
+          autoHideDuration={6000}
+          onClose={handleClose}
+        >
           <AlertSuccess onClose={handleClose} severity="success">
             Hello {info?.name}, your email {info?.email} has been successfully
             registered.
+          </AlertSuccess>
+        </Snackbar>
+        <Snackbar
+          open={openError}
+          autoHideDuration={6000}
+          onClose={handleClose}
+        >
+          <AlertSuccess onClose={handleClose} severity="error">
+            {info?.error?.error}
           </AlertSuccess>
         </Snackbar>
       </form>

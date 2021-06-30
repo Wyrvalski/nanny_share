@@ -13,11 +13,13 @@ export const FooterContainer = styled.footer`
   small {
     padding-top: 60px;
     padding-bottom: 20px;
+    font-size: 12px;
     opacity: 0.6;
   }
   @media only screen and (max-width: 900px) {
     align-items: center;
     width: 100%;
+    padding-top: 40px;
     small {
       padding-top: 0;
     }
@@ -81,9 +83,11 @@ export const SectionFooter = styled.section`
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding-top: 30px;
     #hapu-logo {
       width: auto;
+    }
+    p {
+      font-size: 16px;
     }
     ul {
       padding-top: 16px;
@@ -116,7 +120,7 @@ export const LineFooter = styled.hr`
   @media only screen and (max-width: 900px) {
     border: 2px solid #dfdfdf;
     width: 95%;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 `;

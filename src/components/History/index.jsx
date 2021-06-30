@@ -17,6 +17,7 @@ const History = () => {
         process, transparency over money and equality of participation.
       </Paragraph>
       <LinkParagraph
+        align={"center"}
         title={"Read how Hapu’s tribal background defines our app "}
       />
       <ImageContainer>

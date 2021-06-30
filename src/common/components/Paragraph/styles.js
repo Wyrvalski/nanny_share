@@ -7,4 +7,10 @@ export const ParagraphContainer = styled.p`
   padding-top: 30px;
   padding-bottom: 30px;
   width: ${({ widthSize }) => widthSize || "auto"};
+  @media only screen and (max-width: 900px) {
+    font-size: 16px;
+    padding-top: 5px;
+    width: 100%;
+    text-align: center;
+  }
 `;

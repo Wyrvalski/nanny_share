@@ -8,7 +8,7 @@ import Paragraph from "../../common/components/Paragraph";
 
 const ShareNanny = () => {
   return (
-    <Article isReverse>
+    <Article isReverse paddingTop={"80px"}>
       <LeftElements>
         <SubTitle title={`Share your home, nanny and costs`} width={"300px"} />
         <Paragraph align={"left"}>

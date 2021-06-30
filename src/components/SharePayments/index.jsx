@@ -8,12 +8,15 @@ import Paragraph from "../../common/components/Paragraph";
 
 const SharePayments = () => {
   return (
-    <Article>
+    <Article justifyContent={"space-between"}>
       <LeftElements>
         <img src={ImagePerChild} />
       </LeftElements>
       <RightElements>
-        <SubTitle title={"Shared payments made simple"} />
+        <SubTitle
+          title={"Shared payments made simple"}
+          paddingDevice={"15px 45px"}
+        />
         <Paragraph align={"left"}>
           Sometimes it’s hard enough just sharing a restaurant bill. Try sharing
           that bill week in, week out and you might encounter more than a few

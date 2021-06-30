@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const SubTitleContainer = styled.h2`
   color: #3d3d3d;
-  font-size: 28px;
   line-height: 32px;
   font-size: ${({ font }) => {
     return font || "28px";
@@ -15,6 +14,11 @@ export const SubTitleContainer = styled.h2`
   }};
   @media only screen and (max-width: 900px) {
     text-align: center;
-    padding-top: 40px;
+    padding: ${({ paddingDevice }) => {
+      return paddingDevice || "0px";
+    }};
+    font-size: ${({ font }) => {
+      return font || "22px";
+    }};
   }
 `;

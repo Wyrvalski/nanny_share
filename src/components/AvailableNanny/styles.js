@@ -4,7 +4,6 @@ export const AvalaleContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   background-color: white;
   padding-top: 28px;
   padding-bottom: 28px;

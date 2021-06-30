@@ -13,6 +13,9 @@ export const HeroContainer = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   height: 616px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   @media only screen and (max-width: 900px) {
     height: 540px;
   }
@@ -23,14 +26,17 @@ export const ContentHero = styled.section`
   align-items: center;
   justify-content: space-around;
   height: 100%;
-  margin-top: -60px;
+  max-width: 1440px;
+  @media only screen and (max-width: 900px) {
+    max-width: 540px;
+  }
 `;
 
 export const LeftContent = styled.div`
   width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-left: 40px;
   h1 {
     font-size: 40px;
@@ -52,7 +58,6 @@ export const LeftContent = styled.div`
     align-items: center;
     h1 {
       justify-content: center;
-      width: 80%;
       text-align: center;
     }
     h3 {

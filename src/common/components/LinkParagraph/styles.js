@@ -14,4 +14,7 @@ export const LinkContainer = styled(Link)`
   margin: ${({ marginLink }) => {
     return marginLink || "0 0 0 0";
   }};
+  text-align: ${({ align }) => {
+    return align || "letft";
+  }};
 `;

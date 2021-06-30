@@ -11,7 +11,10 @@ const DailyDiary = () => {
       <ImageContainer>
         <img src={DailyDiaryImage} width={"216px"} />
       </ImageContainer>
-      <SubTitle title={"Coming soon: Nanny Share Daily Diary!"} />
+      <SubTitle
+        title={"Coming soon: Nanny Share Daily Diary!"}
+        paddingDevice={"12px"}
+      />
       <Paragraph align={"center"}>
         With the Hapu daily diary your nanny will be able to update you and your
         sharers with photos and commentary of the day. You and sharers will
