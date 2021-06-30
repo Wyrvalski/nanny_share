@@ -118,7 +118,7 @@ export const SocialNetwork = styled.div`
 
 export const LineFooter = styled.hr`
   @media only screen and (max-width: 900px) {
-    border: 2px solid #dfdfdf;
+    border: 1px solid #dfdfdf;
     width: 95%;
     margin-top: 30px;
     margin-bottom: 30px;

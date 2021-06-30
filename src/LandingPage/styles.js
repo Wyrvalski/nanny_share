@@ -17,7 +17,7 @@ export const Main = styled.main`
 
 export const Line = styled.hr`
   width: 70%;
-  border: 2px solid #dfdfdf;
+  border: 1px solid #dfdfdf;
   margin-top: 120px;
   margin-bottom: 120px;
 
