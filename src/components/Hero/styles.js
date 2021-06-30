@@ -28,7 +28,7 @@ export const ContentHero = styled.section`
   height: 100%;
   max-width: 1440px;
   @media only screen and (max-width: 900px) {
-    max-width: 540px;
+    max-width: 600px;
   }
 `;
 

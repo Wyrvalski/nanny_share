@@ -11,6 +11,7 @@ export const Main = styled.main`
   padding-bottom: 100px;
   @media only screen and (max-width: 900px) {
     padding: 16px;
+    max-width: 525px;
   }
 `;
 
